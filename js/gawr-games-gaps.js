@@ -28,7 +28,7 @@ function testGaps( series, startPosition ) {
 	if ( series.find(".sprite[data-state=\"on\"]").length < 1 ) nextPosition = 999;
 	
 	if (  parseInt(testPosition) !== -1 && parseInt(testPosition) < parseInt(nextPosition) ) nextPosition = testPosition;
-		console.log(nextPosition + " " + testPosition);
+		// console.log(nextPosition + " " + testPosition);
 	while ( series.find(".sprite[data-position=\"" + nextPosition + "\"]").length > 0 && nextPosition <= getLastPositionByThisSeriesSprites(series)) {
 		if ( series.find(".sprite[data-position=\"" + nextPosition + "-fail\"]").attr("data-type") === "object-fail" ) { 
 			fails ++;
